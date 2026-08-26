@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Dymas Putra Pratama</title>
+    <link rel="icon" type="image/png" href="dp.jpg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                    Porto<span class="bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">folio</span>
+                </span>
+            </a>
+            
+            <!-- Desktop Menu & Toggle -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <a href="#about" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Tentang</a>
+                <a href="#projects" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Kegiatan & Proyek</a>
+                <a href="#experience" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Pengalaman</a>
+                <a href="#skills" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Keahlian</a>
+                <a href="#certifications" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Sertifikasi</a>
+                <a href="#contact" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition">Kontak</a>
+                
+                <!-- Dark / Light Mode Toggle Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition flex items-center justify-center border border-slate-300 dark:border-slate-700" aria-label="Toggle Theme">
+                    <i id="theme-icon" class="fa-solid fa-sun text-amber-500 text-base"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Controls -->
+            <div class="flex items-center gap-3 md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-amber-500 border border-slate-300 dark:border-slate-700" aria-label="Toggle Theme">
+                    <i id="theme-icon-mobile" class="fa-solid fa-sun text-base"></i>
+                </button>
+                <button id="menu-btn" class="text-slate-800 dark:text-slate-200 hover:text-cyan-600 focus:outline-none p-1">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-950/95 border-b border-slate-200 dark:border-slate-800 px-6 py-4 space-y-3 backdrop-blur-lg">
+            <a href="#about" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Tentang</a>
+            <a href="#projects" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Kegiatan & Proyek</a>
+            <a href="#experience" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Pengalaman</a>
+            <a href="#skills" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Keahlian</a>
+            <a href="#certifications" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Sertifikasi</a>
+            <a href="#contact" class="block text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 py-1 font-semibold transition">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+            
+            <!-- Foto Profil -->
+            <div class="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-6 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                <img src="pp.jpeg" id="foto-profil" alt="Dymas Putra Pratama" class="relative w-full h-full object-cover object-top rounded-full border-4 border-white dark:border-slate-900 shadow-2xl">
+            </div>
+
+            
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">
+                Halo, Saya <span class="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-500 bg-clip-text text-transparent">Dymas Putra Pratama</span>
+            </h1>
+
+            <p class="text-slate-700 dark:text-slate-300 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+                Lulusan <strong class="text-slate-900 dark:text-white">S1 Sistem Informasi Universitas Bina Bangsa</strong> yang berdedikasi dan berorientasi pada hasil. Terbiasa merancang serta membangun aplikasi berbasis web modern dari sisi <strong class="text-cyan-700 dark:text-cyan-400">Front-End</strong> hingga <strong class="text-cyan-700 dark:text-cyan-400">Back-End</strong> secara terintegrasi dan responsif.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/6287778070291" target="_blank" class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi WhatsApp
+                </a>
+                <a href="mailto:dymaspratama9h@gmail.com" class="bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-envelope text-lg"></i> Kirim Email
+                </a>
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 text-left">
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm hover:border-cyan-500 transition">
+                    <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Pendidikan</p>
+                    <p class="text-sm font-bold text-slate-900 dark:text-slate-200">S1 Sistem Informasi</p>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-400">Univ. Bina Bangsa</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm hover:border-cyan-500 transition">
+                    <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Sertifikasi Profesi</p>
+                    <p class="text-sm font-bold text-amber-600 dark:text-amber-400">BNSP Web Developer</p>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-400">Nasional</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm hover:border-cyan-500 transition">
+                    <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Fokus Keahlian</p>
+                    <p class="text-sm font-bold text-slate-900 dark:text-slate-200">Full-Stack Web Dev</p>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-400">Front-End & Back-End</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700/50 shadow-sm hover:border-cyan-500 transition col-span-2 md:col-span-1">
+                    <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Status Kerja</p>
+                    <p class="text-sm font-bold text-cyan-600 dark:text-cyan-400">Ready to Work</p>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-400">Open for Opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEGIATAN & DOKUMENTASI PROYEK -->
+    <section id="projects" class="py-20 bg-slate-100 dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white" data-aos="fade-up">Dokumentasi Proyek & Implementasi</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-center text-sm mb-12" data-aos="fade-up" data-aos-delay="50">
+                Aktivitas perancangan, diskusi sistem, hingga serah terima solusi perangkat lunak
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Proyek 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl dark:hover:border-cyan-500/50 transition duration-300 group" data-aos="fade-up">
+                    <div class="relative overflow-hidden h-64 md:h-72">
+                        <img src="kkn.jpeg" alt="Diskusi & Konsultasi Sistem Informasi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-cyan-600/90 text-white backdrop-blur-md">
+                            Perancangan & Presentasi Sistem
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Konsultasi & Presentasi Alur Sistem</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                            Melakukan analisis kebutuhan pengguna, mempresentasikan prototipe aplikasi web, dan mengordinasikan integrasi alur data bersama pemangku kepentingan (*stakeholders*).
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-cyan-300 font-semibold">System Analyst</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">UI/UX Prototype</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">Diskusi Stakeholder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl dark:hover:border-cyan-500/50 transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden h-64 md:h-72">
+                        <img src="serah.jpeg" alt="Serah Terima Sistem POS / Aplikasi Web" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-600/90 text-white backdrop-blur-md">
+                            Implementasi & Serah Terima
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Implementasi & Deployment Perangkat Lunak</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                            Penyerahan dan pengujian sistem aplikasi booking berbasis web barbershop siap pakai kepada klien, disertai dengan sosialisasi penggunaan sistem agar dapat langsung mendukung operasional bisnis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-cyan-300 font-semibold">Full-Stack Web</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">User Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN KERJA -->
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white" data-aos="fade-up">Pengalaman Kerja</h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-300 dark:before:bg-slate-700">
+                
+                <!-- Experience 1 -->
+                <div class="relative flex items-center md:justify-between group" data-aos="fade-up">
+                    <div class="flex items-center w-full md:w-1/2 md:pr-8">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 w-full group-hover:border-cyan-500 transition shadow-sm">
+                            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400">2021 - 2023</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Helper</h3>
+                            <p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">PT Pratomo Windastuti Indonesia</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-xs mt-2 leading-relaxed">Menunjukkan dedikasi tinggi, loyalitas, serta menjaga keselamatan dan ritme kerja secara optimal hingga akhir masa kontrak.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white dark:border-slate-900"></div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative flex items-center md:justify-between group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center w-full md:w-1/2 md:ml-auto md:pl-8">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 w-full group-hover:border-cyan-500 transition shadow-sm">
+                            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400">2020</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Operator Produksi</h3>
+                            <p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">PT Paragon Technology and Innovation</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-xs mt-2 leading-relaxed">Menjalankan operasional lini produksi dengan standar kebersihan, presisi, dan target perusahaan yang tinggi.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white dark:border-slate-900"></div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative flex items-center md:justify-between group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center w-full md:w-1/2 md:pr-8">
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 w-full group-hover:border-cyan-500 transition shadow-sm">
+                            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400">2019</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Operator Produksi</h3>
+                            <p class="text-slate-700 dark:text-slate-300 text-sm font-semibold">PT Grakindo Maju Sukses</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-xs mt-2 leading-relaxed">Bertanggung jawab atas efisiensi alur kerja produksi dan kerjasama tim dalam area kerja.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white dark:border-slate-900"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN / SKILLS -->
+    <section id="skills" class="py-20 bg-slate-100 dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white" data-aos="fade-up">Keahlian & Kompetensi</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-center text-sm mb-12" data-aos="fade-up" data-aos-delay="50">
+                Pengembangan teknologi informasi, kemampuan operasional, dan *soft skills* profesional
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- 1. Web Development -->
+                <div class="bg-white dark:bg-slate-800/80 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 transition group shadow-sm" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4 text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">Web Development</h3>
+                    <div class="flex flex-wrap gap-1.5 mb-3">
+                        <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-300 font-semibold">HTML & CSS</span>
+                        <span class="px-2.5 py-1 text-xs rounded-md bg-cyan-100 dark:bg-slate-700 text-cyan-800 dark:text-cyan-400 font-semibold">Tailwind</span>
+                        <span class="px-2.5 py-1 text-xs rounded-md bg-purple-100 dark:bg-slate-700 text-purple-800 dark:text-purple-400 font-semibold">Bootstrap</span>
+                        <span class="px-2.5 py-1 text-xs rounded-md bg-indigo-100 dark:bg-slate-700 text-indigo-800 dark:text-indigo-400 font-semibold">PHP & MySQL</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Membangun website responsif dari sisi Front-End hingga Back-End secara terintegrasi.</p>
+                </div>
+
+                <!-- 2. Software & Tools -->
+                <div class="bg-white dark:bg-slate-800/80 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 transition group shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4 text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">Software & Tools</h3>
+                    <ul class="text-slate-700 dark:text-slate-300 text-xs space-y-2 font-medium">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> VS Code, Git & GitHub
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> XAMPP & Laragon
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Ms. Office (Excel, Word, PPT)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Desain Grafis (Canva)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Operasional & Sertifikasi -->
+                <div class="bg-white dark:bg-slate-800/80 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 transition group shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4 text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">Operasional</h3>
+                    <ul class="text-slate-700 dark:text-slate-300 text-xs space-y-2 font-medium">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> BNSP Certified Web Developer
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Food Handler / Pramusaji
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Higiene Sanitasi Makanan
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Operasional Manufaktur
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Soft Skills -->
+                <div class="bg-white dark:bg-slate-800/80 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-cyan-500 transition group shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4 text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-slate-900 dark:text-white">Soft Skills</h3>
+                    <ul class="text-slate-700 dark:text-slate-300 text-xs space-y-2 font-medium">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Analytical & Systems Thinking
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Problem Solving Mindset
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Kemampuan Leadership
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-cyan-600 dark:text-cyan-400"></i> Kerjasama Tim & Adaptabilitas
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERTIFIKASI & PELATIHAN -->
+<section id="certifications" class="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white" data-aos="fade-up">Sertifikasi & Pelatihan</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-center text-sm mb-12" data-aos="fade-up" data-aos-delay="50">
+            Kredensial profesional dan pelatihan kerja yang diakui secara nasional & industri
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Cert 1: BNSP -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl border-2 border-cyan-500 dark:border-cyan-500/40 text-center shadow-lg relative group overflow-hidden flex flex-col justify-between" data-aos="zoom-in">
+                <span class="absolute top-3 right-3 z-10 px-3 py-0.5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-[10px] font-bold rounded-full uppercase tracking-wider shadow">
+                    Utama
+                </span>
+                
+                <div class="p-6 pb-4">
+                    <!-- Image Container -->
+                    <div class="w-full h-44 mb-4 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700 relative group/img cursor-pointer">
+                        <img src="bnsp.jpeg" alt="Sertifikat BNSP Web Developer" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-xs font-medium px-3 py-1.5 bg-slate-900/80 rounded-full backdrop-blur-sm">
+                                <i class="fa-solid fa-expand mr-1"></i> Lihat Dokumen
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1">Web Developer</h3>
+                    <p class="text-cyan-700 dark:text-cyan-400 font-bold text-xs mb-2">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">Sertifikasi kompetensi nasional bidang pengembangan aplikasi web (Back End Developer).</p>
+                </div>
+            </div>
+
+            <!-- Cert 2: PT Barata Indonesia -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500/50 text-center group shadow-sm hover:shadow-md transition flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                <div class="p-6 pb-4">
+                    <!-- Image Container -->
+                    <div class="w-full h-44 mb-4 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700 relative group/img cursor-pointer">
+                        <img src="ukom.jpeg" alt="Sertifikat PT Barata Indonesia" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-xs font-medium px-3 py-1.5 bg-slate-900/80 rounded-full backdrop-blur-sm">
+                                <i class="fa-solid fa-expand mr-1"></i> Lihat Dokumen
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1">Sertifikat Kompetensi</h3>
+                    <p class="text-slate-800 dark:text-slate-300 font-semibold text-xs mb-2">PT Barata Indonesia (Persero)</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">Pelatihan teknis dan sertifikasi praktik kerja industri (Ujian Praktik Kejuruan).</p>
+                </div>
+            </div>
+
+            <!-- Cert 3: PT Krakatau Steel -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500/50 text-center group shadow-sm hover:shadow-md transition flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
+                <div class="p-6 pb-4">
+                    <!-- Image Container -->
+                    <div class="w-full h-44 mb-4 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700 relative group/img cursor-pointer">
+                        <img src="ks.jpeg" alt="Sertifikat PT Krakatau Steel" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-xs font-medium px-3 py-1.5 bg-slate-900/80 rounded-full backdrop-blur-sm">
+                                <i class="fa-solid fa-expand mr-1"></i> Lihat Dokumen
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1">Kelas Industri</h3>
+                    <p class="text-slate-800 dark:text-slate-300 font-semibold text-xs mb-2">PT Krakatau Steel (Persero) Tbk</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">Program pembinaan dan kesiapan kerja standar manufaktur industri.</p>
+                </div>
+            </div>
+
+            <!-- Cert 4: Dinkes -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500/50 text-center group shadow-sm hover:shadow-md transition flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
+                <div class="p-6 pb-4">
+                    <!-- Image Container -->
+                    <div class="w-full h-44 mb-4 overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-700 relative group/img cursor-pointer">
+                        <img src="hs.jpeg" alt="Sertifikat Dinkes Serang" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white text-xs font-medium px-3 py-1.5 bg-slate-900/80 rounded-full backdrop-blur-sm">
+                                <i class="fa-solid fa-expand mr-1"></i> Lihat Dokumen
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-base text-slate-900 dark:text-white mb-1">Higiene Sanitasi Makanan</h3>
+                    <p class="text-slate-800 dark:text-slate-300 font-semibold text-xs mb-2">Dinas Kesehatan Kab. Serang</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-[11px] leading-relaxed">Sertifikasi standar keamanan dan kebersihan pengolahan makanan (Food Handler).</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- KONTAK & FOOTER -->
+    <footer id="contact" class="py-16 bg-slate-900 dark:bg-slate-950 border-t border-slate-800 relative overflow-hidden text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-3 text-white">Mari Terhubung & Bekerjasama</h2>
+            <p class="text-slate-300 text-sm max-w-lg mx-auto mb-8 leading-relaxed">
+                Saya siap berkontribusi positif, memberikan kinerja terbaik, dan menghadirkan solusi pengembang web handal untuk tim atau proyek Anda.
+            </p>
+            
+            <!-- Contact Cards -->
+            <div class="flex flex-wrap justify-center items-center gap-4 text-sm mb-10">
+                <a href="https://wa.me/6287778070291" target="_blank" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:border-cyan-400 hover:text-cyan-400 transition group">
+                    <i class="fa-solid fa-phone text-cyan-400 group-hover:scale-110 transition"></i>
+                    <span class="font-semibold">087778070291</span>
+                </a>
+
+                <a href="mailto:dymaspratama9h@gmail.com" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:border-cyan-400 hover:text-cyan-400 transition group">
+                    <i class="fa-solid fa-envelope text-cyan-400 group-hover:scale-110 transition"></i>
+                    <span class="font-semibold">dymaspratama9h@gmail.com</span>
+                </a>
+
+                <a href="https://instagram.com/dymas6690" target="_blank" class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 hover:border-pink-500 hover:text-pink-400 transition group">
+                    <i class="fa-brands fa-instagram text-pink-400 group-hover:scale-110 transition"></i>
+                    <span class="font-semibold">@dymas6690</span>
+                </a>
+            </div>
+
+            <div class="w-full h-px bg-slate-800 max-w-xs mx-auto mb-6"></div>
+
+            <p class="text-slate-400 text-xs tracking-wide">
+                &copy; 2026 Dymas Putra Pratama. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const htmlTag = document.documentElement;
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+        function updateIcons(isDark) {
+            if (isDark) {
+                themeIcon.className = 'fa-solid fa-sun text-amber-500 text-base';
+                themeIconMobile.className = 'fa-solid fa-sun text-amber-500 text-base';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon text-slate-700 text-base';
+                themeIconMobile.className = 'fa-solid fa-moon text-slate-700 text-base';
+            }
+        }
+
+        function toggleTheme() {
+            if (htmlTag.classList.contains('dark')) {
+                htmlTag.classList.remove('dark');
+                updateIcons(false);
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlTag.classList.add('dark');
+                updateIcons(true);
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggleBtn?.addEventListener('click', toggleTheme);
+        themeToggleMobileBtn?.addEventListener('click', toggleTheme);
+
+        if (localStorage.getItem('theme') === 'light') {
+            htmlTag.classList.remove('dark');
+            updateIcons(false);
+        } else {
+            htmlTag.classList.add('dark');
+            updateIcons(true);
+        }
+    </script>
+</body>
+</html>
