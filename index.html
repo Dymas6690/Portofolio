@@ -127,60 +127,245 @@
         </div>
     </section>
 
-    <!-- KEGIATAN & DOKUMENTASI PROYEK -->
     <section id="projects" class="py-20 bg-slate-100 dark:bg-slate-800/40">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white" data-aos="fade-up">Dokumentasi Proyek & Implementasi</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-center text-sm mb-12" data-aos="fade-up" data-aos-delay="50">
-                Aktivitas perancangan, diskusi sistem, hingga serah terima solusi perangkat lunak
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Proyek 1 -->
-                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl dark:hover:border-cyan-500/50 transition duration-300 group" data-aos="fade-up">
-                    <div class="relative overflow-hidden h-64 md:h-72">
-                        <img src="kkn.jpeg" alt="Diskusi & Konsultasi Sistem Informasi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-cyan-600/90 text-white backdrop-blur-md">
-                            Perancangan & Presentasi Sistem
-                        </span>
+            
+            <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
+                    Kegiatan & Dokumentasi Proyek
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+                    Eksplorasi hasil karya pengembangan aplikasi web interaktif, sistem ter-deploy, hingga dokumentasi implementasi langsung di lapangan.
+                </p>
+            </div>
+    
+            <div class="flex justify-center flex-wrap gap-2.5 md:gap-3 mb-12" data-aos="fade-up" data-aos-delay="50">
+                <button onclick="filterProjects('all')" class="project-btn active-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-cyan-600 text-white shadow-lg shadow-cyan-500/25">
+                    Semua Proyek
+                </button>
+                <button onclick="filterProjects('live')" class="project-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 shadow-sm">
+                    🚀 Sudah Deployed (Live)
+                </button>
+                <button onclick="filterProjects('dev')" class="project-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 shadow-sm">
+                    🛠️ Source Code / In Dev
+                </button>
+                <button onclick="filterProjects('activity')" class="project-btn px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 shadow-sm">
+                    📸 Dokumentasi Lapangan
+                </button>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+                <div class="project-card live bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up">
+                    <div>
+                        <div class="relative overflow-hidden h-52">
+                            <img src="Depresi.png" alt="Aplikasi Prediksi Depresi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-emerald-500 text-white shadow-md flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live Demo
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                Prediksi Depresi Dalam Lingkungan Kerja
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Aplikasi Data Mining berbasis Streamlit untuk memprediksi tingkat risiko depresi seseorang di lingkungan kerja menggunakan algoritma Machine Learning.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-cyan-50 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-300 font-semibold border border-cyan-200/40 dark:border-cyan-800/40">Python</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Streamlit</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Data Mining</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Konsultasi & Presentasi Alur Sistem</h3>
-                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-                            Melakukan analisis kebutuhan pengguna, mempresentasikan prototipe aplikasi web, dan mengordinasikan integrasi alur data bersama pemangku kepentingan (*stakeholders*).
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-cyan-300 font-semibold">System Analyst</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">UI/UX Prototype</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">Diskusi Stakeholder</span>
+                    <div class="p-6 pt-0 flex items-center gap-2">
+                        <a href="https://depresi-7ntvcsd7pf9ckzqpjhmby2.streamlit.app" target="_blank" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold transition-all duration-200 shadow-sm flex items-center justify-center gap-1.5">
+                            <span>Kunjungi Web</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="project-card live bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="relative overflow-hidden h-52">
+                            <img src="Bads.png" alt="Aplikasi Booking Barbershop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-emerald-500 text-white shadow-md flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Live Demo
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                Bads Barbershop Web Booking
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Sistem informasi pemesanan layanan barbershop berbasis web untuk mempermudah pelanggan melakukan reservasi jadwal cukur secara online.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-cyan-50 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-300 font-semibold border border-cyan-200/40 dark:border-cyan-800/40">Web System</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Online Booking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center gap-2">
+                        <a href="https://www.badsbarber.my.id" target="_blank" class="flex-1 text-center py-2.5 px-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold transition-all duration-200 shadow-sm flex items-center justify-center gap-1.5">
+                            <span>Kunjungi Web</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="project-card dev bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="150">
+                    <div>
+                        <div class="relative overflow-hidden h-52 bg-slate-900 flex items-center justify-center">
+                            <img src="niagaro.png" alt="Aplikasi SaaS POS NIAGARO" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onError="this.onerror=null; this.src='https://placehold.co/600x400/0f172a/06b6d4?text=NIAGARO+POS';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-white shadow-md flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> In Development
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                NIAGARO - SaaS Point of Sale System
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Platform SaaS POS berbasis cloud untuk membantu pemilik usaha retail mengelola transaksi kasir, stok barang, serta laporan penjualan harian.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 font-semibold border border-amber-200/40 dark:border-amber-800/40">SaaS POS</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Web System</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Retail Mgmt</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Proyek 2 -->
-                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-xl dark:hover:border-cyan-500/50 transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden h-64 md:h-72">
-                        <img src="serah.jpeg" alt="Serah Terima Sistem POS / Aplikasi Web" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-600/90 text-white backdrop-blur-md">
-                            Implementasi & Serah Terima
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Implementasi & Deployment Perangkat Lunak</h3>
-                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
-                            Penyerahan dan pengujian sistem aplikasi booking berbasis web barbershop siap pakai kepada klien, disertai dengan sosialisasi penggunaan sistem agar dapat langsung mendukung operasional bisnis.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-cyan-300 font-semibold">Full-Stack Web</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-300 font-semibold">User Training</span>
+    
+                <div class="project-card dev bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="relative overflow-hidden h-52 bg-slate-900 flex items-center justify-center">
+                            <img src="cafe.png" alt="Aplikasi Galaxy Coffeeshop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onError="this.onerror=null; this.src='https://placehold.co/600x400/0f172a/38bdf8?text=Galaxy+Coffeeshop';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-white shadow-md flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> In Development
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                Cafein Coffeeshop Ordering System
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Aplikasi manajemen pemesanan dan kasir interaktif untuk kedai kopi guna mempercepat alur transaksi, manajemen menu, serta pencatatan pesanan.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 font-semibold border border-amber-200/40 dark:border-amber-800/40">Coffeeshop App</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Order System</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">UI/UX</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+    
+                <div class="project-card activity bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="250">
+                    <div>
+                        <div class="relative overflow-hidden h-52">
+                            <img src="kkn.jpeg" alt="Konsultasi Sistem Informasi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-cyan-600 text-white shadow-md">
+                                📸 Kegiatan
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                Konsultasi & Presentasi Alur Sistem
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Proses analisis kebutuhan pengguna, diskusi perancangan alur data, serta presentasi prototipe aplikasi web bersama para pemangku kepentingan.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">System Analyst</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">UI/UX Prototype</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="project-card activity bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 dark:hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="relative overflow-hidden h-52">
+                            <img src="serah.jpeg" alt="Serah Terima Sistem" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-70"></div>
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold bg-blue-600 text-white shadow-md">
+                                📸 Kegiatan
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+                                Implementasi & Serah Terima Sistem
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-5">
+                                Penyerahan dan pengujian akhir perangkat lunak siap pakai kepada klien, dilengkapi dengan sosialisasi serta pelatihan pengguna (*user training*).
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">Deployment</span>
+                                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-semibold">User Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </section>
+
+<!-- SCRIPT FILTER TAB -->
+<script>
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.project-btn');
+
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-cyan-600', 'text-white', 'shadow-lg', 'shadow-cyan-500/25');
+        btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+    });
+
+    event.currentTarget.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+    event.currentTarget.classList.add('bg-cyan-600', 'text-white', 'shadow-lg', 'shadow-cyan-500/25');
+
+    cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+
+<!-- Script Sederhana untuk Filter Tab -->
+<script>
+function filterProjects(category) {
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.project-btn');
+
+    // Ubah status aktif tombol
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-cyan-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+    });
+    event.currentTarget.classList.add('bg-cyan-600', 'text-white', 'shadow-md');
+
+    // Filter elemen
+    cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
 
     <!-- PENGALAMAN KERJA -->
     <section id="experience" class="py-20">
